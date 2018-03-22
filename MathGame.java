@@ -35,18 +35,36 @@ switch(numberToken)
 }
 
     }
+	
+//multiplication method
     public static void multiply(int r1, int r2,Scanner input)
 {
+	boolean isEmpty = true;
+	
+	do
+	{
+	try
+	{
 	System.out.println("Enter the answer for " + r1 + " * " + r2);
 	int answer = input.nextInt();
 	while(answer != (r1*r2))
-{
+	{
 	System.out.println("Wrong answer! Enter again: ");
 	answer = input.nextInt();
+	isEmpty = false;
+	}
+isEmpty = false;
+System.out.println("Correct answer! " + r1 + " multiplied by " + r2 + " is equal to " + answer);
+	}
+	catch(Exception e)
+	{
+		System.out.println("Please enter a number");
+		input.next();
+	}
+	}(while isEmpty)
 }
 
-System.out.println("Correct answer! " + r1 + " multiplied by " + r2 + " is equal to " + answer);
-}
+//add method
 public static void add(int r1, int r2, Scanner input)
 {
 	System.out.println("Enter the answer for " + r1 + " + " + r2);
@@ -62,7 +80,7 @@ System.out.println("Correct answer! " + r1 + " plus " + r2 + " is equal to " + a
 }
 
 
-
+//Subtract method
 public static void subtract(int r1, int r2, Scanner input)
 {
 	System.out.println("Enter the answer for " + r1 + " - " + r2);
@@ -76,6 +94,7 @@ public static void subtract(int r1, int r2, Scanner input)
 System.out.println("Correct answer! " + r1 + " minus " + r2 + " is equal to " + answer);
 }
 
+//divide method
 public static void divide(int r1, int r2, Scanner input)
 {
 	System.out.println("Enter the answer for " + r1 + " / " + r2);
